@@ -1,0 +1,86 @@
+@import 'tailwindcss';
+
+@font-face {
+	font-family: Poppins;
+	src: url('./assets/fonts/Poppins/Poppins-Regular.ttf');
+}
+
+@layer base {
+	:root {
+		/* Light Mode */
+		--color-primary: #5e718d; /* Slate Blue (Primary) */
+		--color-accent: #8b5e83; /* Muted Mauve (Accent) */
+		--color-bg: #f8f5f2; /* Warm White */
+		--color-card: #ffffff; /* Pure White */
+		--color-text: #3a3a3a; /* Soft Black */
+		--color-border: #d8d2cc; /* Warm Gray */
+		--color-success: #6b8f71; /* Sage Green */
+		--color-warning: #d4a373; /* Terracotta */
+	}
+
+	.dark {
+		/* Dark Mode */
+		--color-primary: #a8b2c8; /* Pale Slate */
+		--color-accent: #c9a8c1; /* Soft Mauve */
+		--color-bg: #1a1a1a; /* Rich Black */
+		--color-card: #2d2d2d; /* Dark Gray */
+		--color-text: #e0e0e0; /* Off-White */
+		--color-border: #4a4a4a; /* Charcoal */
+		--color-success: #9cb59f; /* Pale Sage */
+		--color-warning: #e6c19c; /* Light Terracotta */
+	}
+}
+
+@theme {
+	--font-poppins: Poppins, 'sans-serif';
+}
+
+@layer utilities {
+	/* Backgrounds */
+	.bg-primary {
+		background-color: var(--color-primary);
+	}
+	.bg-accent {
+		background-color: var(--color-accent);
+	}
+	.bg-elevated {
+		background-color: var(--color-card);
+	}
+
+	/* Text */
+	.text-primary {
+		color: var(--color-text);
+	}
+	.text-secondary {
+		color: var(--color-primary);
+	}
+
+	/* Borders */
+	.border-decorative {
+		border-color: var(--color-border);
+	}
+
+	/* Status */
+	.bg-success {
+		background-color: var(--color-success);
+	}
+	.bg-warning {
+		background-color: var(--color-warning);
+	}
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 1.8rem;
+}
+
+h3 {
+	font-size: 1.4rem;
+}
+
+h4 {
+	font-size: 1rem;
+}
