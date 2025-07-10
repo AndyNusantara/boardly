@@ -23,7 +23,7 @@ const Title = () => {
 
 const Layout = ({ children }: LayoutPropsType) => {
 	return (
-		<div className="w-full h-screen flex flex-col gap-2 font-poppins bg-primary">
+		<div className="w-full h-screen flex flex-col gap-2 font-poppins bg-background text-body dark">
 			<div className="w-full min-h-20 flex flex-col">
 				<Title />
 				<Breadcrumbs />

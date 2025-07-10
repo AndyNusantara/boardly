@@ -8,26 +8,28 @@
 @layer base {
 	:root {
 		/* Light Mode */
-		--color-primary: #5e718d; /* Slate Blue (Primary) */
-		--color-accent: #8b5e83; /* Muted Mauve (Accent) */
-		--color-bg: #f8f5f2; /* Warm White */
-		--color-card: #ffffff; /* Pure White */
-		--color-text: #3a3a3a; /* Soft Black */
-		--color-border: #d8d2cc; /* Warm Gray */
-		--color-success: #6b8f71; /* Sage Green */
-		--color-warning: #d4a373; /* Terracotta */
+		--primary: #4a6fa5;
+		--background: #f0f4f8;
+		--card: #ffffff;
+		--text: #2d3748;
+		--accent: #718096;
+		--on-progress: #e6f9ee;
+		--on-progress-text: #2e8b57;
+		--archived: #f0f4f8;
+		--archived-text: #5e718d;
 	}
 
 	.dark {
 		/* Dark Mode */
-		--color-primary: #a8b2c8; /* Pale Slate */
-		--color-accent: #c9a8c1; /* Soft Mauve */
-		--color-bg: #1a1a1a; /* Rich Black */
-		--color-card: #2d2d2d; /* Dark Gray */
-		--color-text: #e0e0e0; /* Off-White */
-		--color-border: #4a4a4a; /* Charcoal */
-		--color-success: #9cb59f; /* Pale Sage */
-		--color-warning: #e6c19c; /* Light Terracotta */
+		--primary: #7ba4db;
+		--background: #1a202c;
+		--card: #2d3748;
+		--text: #edf2f7;
+		--accent: #a0aec0;
+		--on-progress: #2e8b57;
+		--on-progress-text: #fff;
+		--archived: #4a5568;
+		--archived-text: #e2e8f0;
 	}
 }
 
@@ -36,36 +38,38 @@
 }
 
 @layer utilities {
-	/* Backgrounds */
-	.bg-primary {
-		background-color: var(--color-primary);
-	}
-	.bg-accent {
-		background-color: var(--color-accent);
-	}
-	.bg-elevated {
-		background-color: var(--color-card);
-	}
-
 	/* Text */
 	.text-primary {
-		color: var(--color-text);
+		color: var(--primary);
 	}
-	.text-secondary {
-		color: var(--color-primary);
+	.text-body {
+		color: var(--text);
+	}
+
+	/* Backgrounds */
+	.bg-background {
+		background-color: var(--background);
+	}
+	.bg-primary {
+		background-color: var(--primary);
+	}
+	.bg-card {
+		background-color: var(--card);
 	}
 
 	/* Borders */
-	.border-decorative {
-		border-color: var(--color-border);
+	.border-accent {
+		border-color: var(--accent);
 	}
 
-	/* Status */
-	.bg-success {
-		background-color: var(--color-success);
+	.status-on-progress {
+		background-color: var(--on-progress);
+		color: var(--on-progress-text);
 	}
-	.bg-warning {
-		background-color: var(--color-warning);
+
+	.status-archived {
+		background-color: var(--archived);
+		color: var(--archived-text);
 	}
 }
 

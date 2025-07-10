@@ -10,7 +10,7 @@ type CardPropsType = {
 
 const Card: React.FC<CardPropsType> = (props) => {
 	return (
-		<div className="w-full min-h-40 p-2 rounded-md bg-elevated text-secondary border-decorative">
+		<div className="w-full min-h-40 p-2 rounded-md bg-card border-accent">
 			<div className="w-full h-full p-2 flex flex-col justify-between">
 				<div>
 					<h2>{props.title}</h2>

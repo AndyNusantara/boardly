@@ -2,8 +2,8 @@ import cn from 'classnames'
 
 const Status = ({ status }: { status: string }) => {
 	const style = cn(
-		'w-fit text-secondary',
-		status === 'onProgress' ? 'bg-success' : ''
+		'w-fit p-1 rounded-sm',
+		status === 'onProgress' ? 'status-on-progress' : 'status-archived'
 	)
 
 	return (

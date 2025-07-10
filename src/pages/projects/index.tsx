@@ -35,7 +35,7 @@ const dummy = [
 		title: 'Project 1',
 		createdAt: '25/02/2025',
 		description: 'My personal website project',
-		status: 'on progress'
+		status: 'archived'
 	}
 ]
 
@@ -43,8 +43,9 @@ const Projects = () => {
 	return (
 		<div className="w-full h-full p-10">
 			<div className="w-full grid grid-cols-3 gap-10">
-				{dummy.map((item) => (
+				{dummy.map((item, index) => (
 					<Card
+						key={index}
 						title={item.title}
 						createdAt={item.createdAt}
 						description={item.description}
